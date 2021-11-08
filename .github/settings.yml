@@ -4,6 +4,9 @@ repository:
   # The name of the repository. Changing this will rename the repository
   name: template
   
+  # Either `true` to make the repository private, or `false` to make it public.
+  private: false
+  
 teams:
   - name: leads
     permission: admin
