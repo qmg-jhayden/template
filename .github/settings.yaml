@@ -2,38 +2,40 @@
 
 repository:
   # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
+  
+  name: jon-template
 
   # Either `true` to make the repository private, or `false` to make it public.
   private: true
 
-# See https://docs.github.com/en/rest/reference/teams#add-or-update-team-repository-permissions for available options
-teams:
-  - name: leads
-    permission: admin
-  - name: jons-team
-    permission: push
+# # See https://docs.github.com/en/rest/reference/teams#add-or-update-team-repository-permissions for available options
+# teams:
+#   - name: leads
+#     permission: admin
+#   - name: jons-team
+#     permission: push
 
-branches:
-  - name: main
-    # https://docs.github.com/en/rest/reference/repos#update-branch-protection
-    # Branch Protection settings. Set to null to disable
-    protection:
-      # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
-      required_pull_request_reviews:
-        # The number of approvals required. (1-6)
-        required_approving_review_count: 1
-        # Dismiss approved reviews automatically when a new commit is pushed.
-        dismiss_stale_reviews: true
-        # Blocks merge until code owners have reviewed.
-        require_code_owner_reviews: true
-      # Required. Require status checks to pass before merging. Set to null to disable
-      required_status_checks:
-        # Required. Require branches to be up to date before merging.
-        strict: true
-        # Required. The list of status checks to require in order to merge into this branch
-        contexts: []
-      # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
-      restrictions:
-        apps: []
-        users: [*]
-        teams: []
+# branches:
+#   - name: main
+#     # https://docs.github.com/en/rest/reference/repos#update-branch-protection
+#     # Branch Protection settings. Set to null to disable
+#     protection:
+#       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
+#       required_pull_request_reviews:
+#         # The number of approvals required. (1-6)
+#         required_approving_review_count: 1
+#         # Dismiss approved reviews automatically when a new commit is pushed.
+#         dismiss_stale_reviews: true
+#         # Blocks merge until code owners have reviewed.
+#         require_code_owner_reviews: true
+#       # Required. Require status checks to pass before merging. Set to null to disable
+#       required_status_checks:
+#         # Required. Require branches to be up to date before merging.
+#         strict: true
+#         # Required. The list of status checks to require in order to merge into this branch
+#         contexts: []
+#       # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
+#       restrictions:
+#         apps: []
+#         users: [*]
+#         teams: []
